@@ -18,3 +18,30 @@ for (let i = 0; input !== null || input == false; i++) {
 }
 console.log(numbers);
 console.log(total);
+
+// ВАРИАНТ 2////////////
+
+
+
+
+let input = " ";
+const numbers = [];
+let total = 0;
+while (input) {
+  input = prompt("Введите число");
+  console.log(input);
+  if (input == null) {
+    alert("Отменено пользователем");
+    console.log(input);
+    // continue;
+  } else {
+    input = Number(input);
+    if (!isNaN(input)) {
+      numbers.push(input);
+        total += input;
+      console.log(numbers);
+    }
+  }
+}
+console.log(numbers);
+console.log(`Общая сумма чисел равна ${total}`);
